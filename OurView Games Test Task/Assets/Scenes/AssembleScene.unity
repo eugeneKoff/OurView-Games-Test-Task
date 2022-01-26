@@ -2312,7 +2312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EventMask:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 128
   m_MaxRayIntersections: 0
 --- !u!1 &984975316
 GameObject:
@@ -2659,7 +2659,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  m_Radius: 1.71
+  m_Radius: 2.17
   m_Height: 10.55
   m_Direction: 2
   m_Center: {x: 0, y: 1.53, z: 0}
@@ -7460,7 +7460,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 3
 --- !u!65 &1087776342
@@ -8003,7 +8003,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!1 &1323584494
 GameObject:
   m_ObjectHideFlags: 0
@@ -8619,6 +8619,8 @@ MonoBehaviour:
   repairMode: 0
   warningPanel: {fileID: 1715609950}
   isWarningPanelEnabled: 0
+  touchPhase: 0
+  carpart: {fileID: 0}
 --- !u!1 &1576715511
 GameObject:
   m_ObjectHideFlags: 0
@@ -9531,7 +9533,7 @@ GameObject:
   - component: {fileID: 1929030900}
   - component: {fileID: 1929030899}
   - component: {fileID: 1929030898}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9855,7 +9857,7 @@ GameObject:
   - component: {fileID: 2188571631776715366}
   - component: {fileID: 4798632441273811327}
   - component: {fileID: 7545722757881952310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BR_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9873,7 +9875,7 @@ GameObject:
   - component: {fileID: 8819646909434877567}
   - component: {fileID: 6167436104540387703}
   - component: {fileID: 2271723146203991117}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brake_Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9891,7 +9893,7 @@ GameObject:
   - component: {fileID: 5200138668764307908}
   - component: {fileID: 7129204600660830927}
   - component: {fileID: 2869154766442804292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FL_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9923,7 +9925,7 @@ GameObject:
   - component: {fileID: 8103816428659288617}
   - component: {fileID: 6618906927906028138}
   - component: {fileID: 6848670969027772855}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Front_Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10120,7 +10122,7 @@ GameObject:
   - component: {fileID: 2594344187873376929}
   - component: {fileID: 5821179009337721504}
   - component: {fileID: 2380421287398146857}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Steerwheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10244,7 +10246,7 @@ GameObject:
   - component: {fileID: 5201684748914785545}
   - component: {fileID: 6839922682459091106}
   - component: {fileID: 5036627586850500730}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BL_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10322,7 +10324,7 @@ GameObject:
   - component: {fileID: 8451750467641995149}
   - component: {fileID: 5016067048715797699}
   - component: {fileID: 2367998024078427207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BR_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10356,7 +10358,7 @@ GameObject:
   - component: {fileID: 8956559338262173944}
   - component: {fileID: 5517102130472906951}
   - component: {fileID: 4326964179620185005}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BL_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10432,7 +10434,7 @@ GameObject:
   - component: {fileID: 2344890685871659780}
   - component: {fileID: 7752532434750122053}
   - component: {fileID: 7208018563848610508}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FR_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10608,7 +10610,7 @@ GameObject:
   - component: {fileID: 4593367033671814882}
   - component: {fileID: 6069320799067127355}
   - component: {fileID: 8754525121702733468}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FL_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10626,7 +10628,7 @@ GameObject:
   - component: {fileID: 6829926890401574901}
   - component: {fileID: 3986018772593280780}
   - component: {fileID: 8345168080081110316}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10842,7 +10844,7 @@ GameObject:
   - component: {fileID: 5423636913875186596}
   - component: {fileID: 3885622096959267413}
   - component: {fileID: 7238354651609327351}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bumper_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11001,7 +11003,7 @@ GameObject:
   - component: {fileID: 913757006011364422}
   - component: {fileID: 1950019864059022079}
   - component: {fileID: 1748552392407451397}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11110,7 +11112,7 @@ GameObject:
   - component: {fileID: 3530958864292967734}
   - component: {fileID: 7557428785613221783}
   - component: {fileID: 5367658346217679289}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FR_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11203,7 +11205,7 @@ GameObject:
   - component: {fileID: 3668216621023615666}
   - component: {fileID: 3413425697002356649}
   - component: {fileID: 9188236767789847354}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11233,7 +11235,7 @@ GameObject:
   - component: {fileID: 1371262556401952062}
   - component: {fileID: 3559308311179013460}
   - component: {fileID: 4752520790020254309}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bumper_back
   m_TagString: Untagged
   m_Icon: {fileID: 0}

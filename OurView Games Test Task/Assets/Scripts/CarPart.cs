@@ -83,8 +83,6 @@ public class CarPart : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
     }
 
-    
-
     public void OnPointerDown(PointerEventData eventData)
     {
         print(gameObject.name + " selected");
@@ -180,7 +178,11 @@ public class CarPart : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     private void AddRigidbody()
     {
+        if(!gameObject.TryGetComponent(out _rb))
+        {
         _rb = gameObject.AddComponent<Rigidbody>();
+
+        }
         _rb.isKinematic = true;
         _rb.mass = 10;
     }

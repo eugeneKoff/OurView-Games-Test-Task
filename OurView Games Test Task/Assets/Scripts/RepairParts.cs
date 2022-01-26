@@ -14,6 +14,8 @@ public class RepairParts : MonoBehaviour
     public static RepairParts instance;
     public bool isWarningPanelEnabled;
 
+    public TouchPhase touchPhase = TouchPhase.Began;
+    public CarPart carpart;
     private void Start()
     {
         instance = this;
@@ -54,4 +56,28 @@ public class RepairParts : MonoBehaviour
     {
         StartCoroutine(EnableWarningPanelCoroutine(secondsToShow));
     }
+
+#if !UNITY_EDITOR
+    private void Update()
+    {
+        if (Input.touchCount == 1 && Input.GetTouch(0).phase == touchPhase)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            RaycastHit hit;
+            Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow, 100f);
+            if (Physics.Raycast(ray, out hit))
+            {
+
+                if(hit.collider.TryGetComponent(out carpart))
+                {
+                    carpart.isSelected = true;
+                }
+            }
+        }
+        else if(Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            carpart.isSelected = false;
+        }
+    }
+#endif
 }
